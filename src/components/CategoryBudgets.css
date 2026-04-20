@@ -1,0 +1,157 @@
+.cb-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: var(--card-padding);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cb-empty {
+  display: flex;
+  flex-direction: column;
+}
+
+.cb-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cb-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.cb-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 12px;
+  transition: background 0.2s;
+}
+
+.cb-row:hover {
+  background: color-mix(in srgb, var(--border) 30%, transparent);
+}
+
+.cb-over {
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.05);
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0%   { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.2); }
+  70%  { box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.cb-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cb-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.cb-icon {
+  font-size: 1.2rem;
+}
+
+.cb-budget-display {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cb-budget-pill {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 99px;
+  background: var(--border);
+  color: var(--text);
+}
+
+.pill-none {
+  background: transparent;
+  color: var(--text-muted);
+}
+
+.pill-alert {
+  background: var(--danger);
+  color: white;
+}
+
+.cb-edit-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity 0.2s;
+}
+
+.cb-row:hover .cb-edit-btn {
+  opacity: 1;
+}
+
+.cb-edit-btn:hover {
+  transform: scale(1.1);
+}
+
+.cb-bar-wrapper {
+  height: 6px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.cb-bar {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+
+.bg-red {
+  background: var(--danger) !important;
+}
+
+.cb-edit-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cb-input {
+  width: 80px;
+  background: var(--bg);
+  border: 1px solid var(--primary);
+  color: var(--text);
+  padding: 0.3rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.cb-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.cb-btn:hover {
+  transform: scale(1.1);
+}

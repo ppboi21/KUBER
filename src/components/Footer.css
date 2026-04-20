@@ -1,0 +1,156 @@
+/* ── Footer ── */
+.app-footer {
+  width: 100%;
+  background: var(--card-bg, #111118);
+  border-top: 1px solid var(--border, #1f1f2e);
+  padding: 2rem 1.5rem 1.5rem;
+  margin-top: auto;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+/* Brand */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.footer-logo {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  background: linear-gradient(135deg, var(--primary, #6366f1), var(--accent, #8b5cf6));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-tagline {
+  font-size: 0.78rem;
+  color: var(--text-muted, #6b7280);
+  margin: 0;
+}
+
+/* Tech chips */
+.footer-tech {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.footer-tech-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted, #6b7280);
+  margin: 0;
+  font-weight: 600;
+}
+
+.footer-tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.tech-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: color-mix(in srgb, var(--primary, #6366f1) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary, #6366f1) 25%, transparent);
+  color: var(--text, #e8eaf6);
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.tech-chip:hover {
+  background: color-mix(in srgb, var(--primary, #6366f1) 20%, transparent);
+  border-color: var(--primary, #6366f1);
+  transform: translateY(-1px);
+}
+
+.tech-icon {
+  font-size: 0.9rem;
+}
+
+/* Credit */
+.footer-credit {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--text-muted, #6b7280);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-author {
+  color: var(--primary, #6366f1);
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.footer-year {
+  opacity: 0.6;
+}
+
+/* ── Social links ── */
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--text-muted, #6b7280) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--text-muted, #6b7280) 20%, transparent);
+  color: var(--text-muted, #6b7280);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.social-link:hover {
+  background: color-mix(in srgb, var(--text, #f1f5f9) 15%, transparent);
+  border-color: var(--text, #f1f5f9);
+  color: var(--text, #f1f5f9);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* LinkedIn gets its brand colour on hover */
+.social-link--linkedin:hover {
+  background: color-mix(in srgb, #0a66c2 20%, transparent);
+  border-color: #0a66c2;
+  color: #0a66c2;
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
+}
+
+.social-svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
