@@ -112,3 +112,24 @@
 .empty-icon {
   font-size: 3rem;
 }
+
+@media (max-width: 500px) {
+  .expense-list-card {
+    padding: 1.25rem 1rem;
+  }
+  .expense-item {
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+  .expense-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.25rem;
+  }
+  .expense-desc {
+    font-size: 0.85rem;
+  }
+  .expense-amount {
+    font-size: 0.9rem;
+  }
+}
