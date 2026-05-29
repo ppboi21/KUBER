@@ -1,70 +1,204 @@
-# Getting Started with Create React App
+# 🪙 KUBER — Track Every Rupee
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> *Inspired by Kubera, the Hindu God of Wealth*
 
-## Available Scripts
+**KUBER** is a real-world, production-level expense tracking web application built with React and Firebase. It empowers users to take full control of their personal finances — log daily expenses, set monthly budgets, visualize spending patterns, and make smarter money decisions. All data is securely stored in the cloud and accessible from any device.
 
-In the project directory, you can run:
+🌐 **Live Demo:** [kuber-expense-tracker.vercel.app](https://kuber-expense-tracker.vercel.app)  
+📁 **GitHub:** [github.com/ppboi21/KUBER](https://github.com/ppboi21/KUBER)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🎯 Problem Statement
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Most people have no idea where their money goes every month. Generic banking apps show raw transactions but offer no budget control, no spending insights, and no way to reflect on financial habits. This leads to overspending, poor saving habits, and financial stress — especially for students and young professionals.
 
-### `npm test`
+**KUBER** solves this by providing:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- A clean, intuitive interface to log and categorize every expense
+- Real-time budget tracking so you never overspend
+- Visual charts that turn raw numbers into meaningful insights
+- Secure cloud storage so your data is always safe and accessible
 
-### `npm run build`
+**Who is the user?**  
+Students, young professionals, freelancers, and anyone who wants to build better financial habits and gain clarity over their spending.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Why does this problem matter?**  
+Financial awareness is the first step to financial freedom. When you know where your money goes, you can make better decisions — save more, stress less, and work towards your goals.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ✨ Features
 
-### `npm run eject`
+### 🔐 Authentication
+- Sign in with **Google** (one click)
+- Sign in with **Email & Password**
+- Secure session management with Firebase Auth
+- Protected routes — only logged-in users can access the app
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 📊 Dashboard
+- Overview of total **income**, **expenses**, and **balance**
+- Monthly summary at a glance
+- Quick access to recent transactions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### ➕ Expense Management
+- Add expenses with **category, amount, date, and notes**
+- Edit or delete any existing transaction
+- Filter and search through your expense history
+- Full **CRUD** functionality powered by Firestore
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 📈 Charts & Insights
+- **Pie chart** — spending breakdown by category
+- **Bar chart** — monthly spending trends
+- Powered by **Recharts** for smooth, interactive visuals
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 💰 Budget Tracker
+- Set a monthly budget for each category
+- Visual progress bars showing how much of your budget is used
+- Instant alerts when you're close to or over budget
 
-## Learn More
+### 📱 Responsive Design
+- Fully responsive — works seamlessly on mobile, tablet, and desktop
+- Clean, minimal dark-themed UI for a focused experience
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🛠️ Tech Stack
 
-### Code Splitting
+| Layer | Technology |
+|---|---|
+| Frontend Framework | React 19 |
+| Routing | React Router v7 |
+| State Management | Context API, useState, useEffect, useMemo |
+| Custom Hooks | useExpenses, useBudget |
+| Backend / Database | Firebase Firestore |
+| Authentication | Firebase Auth (Google + Email/Password) |
+| Data Visualization | Recharts |
+| Styling | CSS Modules |
+| Deployment | Vercel |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## ⚛️ React Concepts Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+| Concept | Usage |
+|---|---|
+| Functional Components | Entire app built with functional components |
+| useState | Managing local UI state |
+| useEffect | Fetching data from Firestore on mount |
+| useContext | Global auth and expense state |
+| useMemo | Optimizing chart data calculations |
+| useRef | Form input references |
+| Custom Hooks | `useExpenses`, `useBudget` for reusable logic |
+| React Router | Multi-page navigation with protected routes |
+| Conditional Rendering | Auth-based UI rendering |
+| Controlled Components | All forms use controlled inputs |
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🗂️ Project Structure
 
-### Advanced Configuration
+```
+src/
+├── components/       # Reusable UI components
+│   ├── Navbar.js
+│   ├── Sidebar.js
+│   ├── Footer.js
+│   ├── ExpenseList.js
+│   └── Charts.js
+├── pages/            # Route-level pages
+│   ├── Login.js
+│   ├── Dashboard.js
+│   └── Budget.js
+├── hooks/            # Custom React hooks
+│   ├── useExpenses.js
+│   └── useBudget.js
+├── context/          # Global state via Context API
+│   └── AuthContext.js
+└── services/         # Firebase config and Firestore functions
+    └── firebase.js
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## ⚙️ Setup Instructions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Prerequisites
+- Node.js (v16 or above)
+- A Firebase account
 
-### `npm run build` fails to minify
+### 1. Clone the repository
+```bash
+git clone https://github.com/ppboi21/KUBER.git
+cd KUBER
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Set up Firebase
+- Go to [Firebase Console](https://console.firebase.google.com)
+- Create a new project
+- Enable **Authentication** → Google + Email/Password
+- Create a **Firestore** database in production mode
+- Go to Project Settings → copy your Firebase config
+
+### 4. Create a `.env` file in the root directory
+```env
+REACT_APP_API_KEY=your_api_key
+REACT_APP_AUTH_DOMAIN=your_auth_domain
+REACT_APP_PROJECT_ID=your_project_id
+REACT_APP_STORAGE_BUCKET=your_storage_bucket
+REACT_APP_MESSAGING_SENDER_ID=your_sender_id
+REACT_APP_APP_ID=your_app_id
+```
+
+> ⚠️ Never commit your `.env` file. It is already added to `.gitignore`.
+
+### 5. Start the development server
+```bash
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
+
+---
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+This creates an optimized production build in the `/build` folder, ready for deployment.
+
+---
+
+## 🚀 Deployment
+
+This project is deployed on **Vercel**. Any push to the `main` branch automatically triggers a new deployment.
+
+To deploy your own version:
+1. Fork this repository
+2. Import it on [vercel.com](https://vercel.com)
+3. Add your Firebase environment variables in Vercel project settings
+4. Deploy!
+
+---
+
+## 👨‍💻 Author
+
+**Praveen Panigrahi**  
+GitHub: [@ppboi21](https://github.com/ppboi21)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+> *"Know where every rupee goes — because financial clarity is the first step to financial freedom."* 🪙
